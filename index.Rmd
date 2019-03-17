@@ -1,0 +1,281 @@
+---
+title: "Todo estatístico deveria ser programador?"
+author: "Daniel Falbel <br> William Amorim <br> <a href='https://www.curso-r.com'>curso-r</a>"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Sobre nós
+
+<img src="img/danilly.png" style = "display: block; margin-left: auto; margin-right: auto; width: 90%";>
+
+<br>
+
+<img src="img/curso-r.png" style = "display: block; margin-left: auto; margin-right: auto; width: 60%";>
+
+---
+
+# Sobre a apresentação
+
+* Essa apresentação é baseada na apresentação [*Should all statistics students be programmers?*](https://speakerdeck.com/hadley/should-all-statistics-students-be-programmers) do Hadley Wickham.
+
+<img src="img/hadley.jpg" style = "display: block; margin-left: auto; margin-right: auto; width: 50%";>
+
+
+---
+class: center, middle
+
+# Todo estatístico deveria ser programador?
+
+---
+class: center, middle
+
+![](https://camo.githubusercontent.com/9516e3f3fc79a6a029c13584de01494afb836f2b/687474703a2f2f766973616f6369646164652e636f6d2e62722f77702d636f6e74656e742f75706c6f6164732f323031372f30362f6e2543332541336f2d312e6a7067)
+
+---
+class: center, middle
+
+# Agora...
+
+### Todo estatístico deveria programar?
+
+---
+class: center, middle
+
+![](https://camo.githubusercontent.com/250dd773f2a38af8c45eceaf96ca2ab65ec9d96c/687474703a2f2f73696d2d6f752d6e616f2e676f6f64706c6163652e65752f73696d2e706e67)
+
+
+---
+class: center, middle
+
+O que o estatístico deveria saber fazer?
+
+# Modelos?
+
+
+---
+class: center, middle
+
+## O que o estatístico deveria saber fazer?
+
+<img src="img/ciclo-ciencia-de-dados.png" style = "display: block; margin-left: auto; margin-right: auto;">
+
+---
+## O computador é a ferramenta do cientista de dados
+
+<br>
+
+<img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif" style = "display: block; margin-left: auto; margin-right: auto;">
+
+---
+## Ferramanta vs conhecimento
+
+<br>
+
+<img src="img/parafuso.jpeg" style="display: block; margin-left: auto; margin-right: auto; width: 70%"> 
+
+---
+## Precisamos nos comunicar com o computador
+
+<img src="img/diagrama-programacao.png" style="display: block; margin-left: auto; margin-right: auto; width: 70%"> 
+
+---
+## Point-click vs linguagens de programação
+
+<br>
+
+--
+
+.pull-left[
+<img src = "img/chave-de-fenda.jpg" style="width:80%">
+]
+
+--
+
+.pull-right[
+<img src = "img/chave-de-fenda-r.jpg" style="width:80%">
+]
+
+---
+class: center, middle
+
+### Por que programar é sempre preferível?
+
+<br>
+
+# 1. Código é texto
+# 2. Código é legível
+# 3. Código é aberto
+
+---
+class: middle, center, inverse
+
+# Código é texto
+
+---
+class: middle, center
+
+### Copiar & Colar 
+
+<img src="https://camo.githubusercontent.com/c8400b8b8aa5d9eb50641b3a1c47088cb9103f8b/687474703a2f2f7777772e6a6f736f66746563682e636f6d2f696d616765732f636f70792d70617374652e706e67" style="width: 100%">
+
+---
+### Copiar & Colar 
+
+```
+bd1 <- read_csv("base1.csv")
+```
+
+--
+
+```
+bd2 <- read_csv("base2.csv")
+bd3 <- read_csv("base3.csv")
+bd4 <- read_csv("base4.csv")
+bd5 <- read_csv("base5.csv")
+```
+
+-- 
+
+Sim! Essa é uma estratégia boa no começo!
+
+---
+class: middle, center
+
+### Stack Overflow
+
+<img src="https://user-images.githubusercontent.com/4706822/44841420-acea5b80-ac19-11e8-8205-f17c01fbb803.png" style="width: 70%">
+
+---
+class: middle, center, inverse
+
+# Código é legível
+
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(magrittr)
+library(magick)
+library(ggplot2)
+library(dplyr)
+library(viridis)
+```
+
+```{r, eval = FALSE}
+image_read("https://jeroen.github.io/images/frink.png") %>%
+  image_rotate(270) %>%
+  image_background("blue", flatten = TRUE) %>%
+  image_border("red", "10x10") %>%
+  image_annotate("Liguagens de programação ainda\nsão linguagens!", 
+                 color = "white", size = 30)
+```
+
+--
+
+.pull-left[
+<img src = "https://jeroen.github.io/images/frink.png">
+]
+
+<!-- .pull-right[ -->
+<!-- ```{r, eval = TRUE, echo = FALSE} -->
+<!-- image_read("https://jeroen.github.io/images/frink.png") %>% -->
+<!--   image_rotate(270) %>% -->
+<!--   image_background("blue", flatten = TRUE) %>% -->
+<!--   image_border("red", "10x10") %>% -->
+<!--   image_annotate("Liguagens de programação ainda\nsão linguagens!",  -->
+<!--                  color = "white", size = 30) -->
+<!-- ``` -->
+<!-- ] -->
+
+---
+class: middle, center
+
+## Código te dá confiança de que está certo!
+
+<img src="https://user-images.githubusercontent.com/4706822/44843506-dbb70080-ac1e-11e8-892b-744a60bafaeb.png" style="width:80%;">
+
+---
+
+## Ahh, meu erro estava aqui!
+
+```
+bd1 <- read_csv("base1.csv")
+bd2 <- read_csv("base2.csv")
+bd3 <- read_csv("base3.csv")
+bd4 <- read_csv("base4.csv")
+*bd5 <- read_csv("base4.csv")
+```
+
+---
+class: middle, center, inverse
+
+# Código é aberto
+
+---
+class: middle, center
+
+
+# Todas as linguagens de programação modernas são open-source
+
+---
+
+# Grátis
+
+* Estudantes podem usar as mesmas ferramentas que os profissionais
+* Todos podem usar as melhores ferramentas idenpendente do poder financeiro
+* Qualquer um pode reproduzir as suas análises
+
+---
+
+# Aberto
+
+* Você pode corrigir problemas
+* Você pode desenvolver suas próprias ferramentas
+
+---
+
+# Por que usar o R?
+
+---
+
+## Ciclo da ciência de dados
+
+<img src="img/ciclo-ciencia-de-dados.png" style = "display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## Ciclo da ciência de dados
+
+<img src="img/ciclo-ciencia-de-dados-pacotes.png" style = "display: block; margin-left: auto; margin-right: auto;">
+
+---
+class: middle, center, inverse
+
+# Tidyverse
+
+---
+# Tidyverse
+
+Coleção de pacotes com a mesma filosofia, gramática e estrutura de dados.
+
+- Cada pacote contém funções para lidar um problema específico.
+- Todos os pacotes são construídos para trabalharem bem com o operador pipe `%>%`.
+- As funções de cada pacote têm nomes intuitivos e sintaxe parecida.
+- Os pacotes do tidyverse nos incentivam a trabalhar com bases "tidy".
+
+---
+class: middle, center
+
+# Tidyverse
+
+<img src="img/tidyverse.png" style = "display: block; margin-left: auto; margin-right: auto; width: 80%;">
