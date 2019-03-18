@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html>
   <head>
     <title>Todo estatístico deveria ser programador?</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="author" content="Daniel Falbel   William Amorim   curso-r" />
-    <meta name="date" content="2019-03-17" />
+    <meta name="date" content="2019-03-18" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
   </head>
@@ -14,7 +14,7 @@ class: center, middle, inverse, title-slide
 
 # Todo estatístico deveria ser programador?
 ### Daniel Falbel <br> William Amorim <br> <a href='https://www.curso-r.com'>curso-r</a>
-### 2019-03-17
+### 2019-03-18
 
 ---
 
@@ -84,7 +84,7 @@ class: center, middle
 &lt;img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif" style = "display: block; margin-left: auto; margin-right: auto;"&gt;
 
 ---
-## Ferramanta vs conhecimento
+## Ferramenta vs conhecimento
 
 &lt;br&gt;
 
@@ -181,22 +181,15 @@ image_read("https://jeroen.github.io/images/frink.png") %&gt;%
                  color = "white", size = 30)
 ```
 
---
-
 .pull-left[
 &lt;img src = "https://jeroen.github.io/images/frink.png"&gt;
 ]
 
-&lt;!-- .pull-right[ --&gt;
-&lt;!-- ```{r, eval = TRUE, echo = FALSE} --&gt;
-&lt;!-- image_read("https://jeroen.github.io/images/frink.png") %&gt;% --&gt;
-&lt;!--   image_rotate(270) %&gt;% --&gt;
-&lt;!--   image_background("blue", flatten = TRUE) %&gt;% --&gt;
-&lt;!--   image_border("red", "10x10") %&gt;% --&gt;
-&lt;!--   image_annotate("Liguagens de programação ainda\nsão linguagens!",  --&gt;
-&lt;!--                  color = "white", size = 30) --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- ] --&gt;
+--
+
+.pull-right[ 
+&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" width="620" /&gt;
+]
 
 ---
 class: middle, center
@@ -281,7 +274,6 @@ class: middle, center
 
 &lt;img src="img/tidyverse.png" style = "display: block; margin-left: auto; margin-right: auto; width: 80%;"&gt;
     </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
@@ -291,57 +283,16 @@ class: middle, center
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
 })();</script>
 
 <script>
 (function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
-
-<script>
-slideshow._releaseMath = function(el) {
-  var i, text, code, codes = el.getElementsByTagName('code');
+  var i, text, code, codes = document.getElementsByTagName('code');
   for (i = 0; i < codes.length;) {
     code = codes[i];
     if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
@@ -355,15 +306,14 @@ slideshow._releaseMath = function(el) {
     }
     i++;
   }
-};
-slideshow._releaseMath(document);
+})();
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);

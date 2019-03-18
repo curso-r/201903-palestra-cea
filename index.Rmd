@@ -78,7 +78,7 @@ class: center, middle
 <img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif" style = "display: block; margin-left: auto; margin-right: auto;">
 
 ---
-## Ferramanta vs conhecimento
+## Ferramenta vs conhecimento
 
 <br>
 
@@ -171,7 +171,7 @@ library(dplyr)
 library(viridis)
 ```
 
-```{r, eval = FALSE}
+```{r, eval = FALSE, echo = TRUE}
 image_read("https://jeroen.github.io/images/frink.png") %>%
   image_rotate(270) %>%
   image_background("blue", flatten = TRUE) %>%
@@ -180,22 +180,22 @@ image_read("https://jeroen.github.io/images/frink.png") %>%
                  color = "white", size = 30)
 ```
 
---
-
 .pull-left[
 <img src = "https://jeroen.github.io/images/frink.png">
 ]
 
-<!-- .pull-right[ -->
-<!-- ```{r, eval = TRUE, echo = FALSE} -->
-<!-- image_read("https://jeroen.github.io/images/frink.png") %>% -->
-<!--   image_rotate(270) %>% -->
-<!--   image_background("blue", flatten = TRUE) %>% -->
-<!--   image_border("red", "10x10") %>% -->
-<!--   image_annotate("Liguagens de programação ainda\nsão linguagens!",  -->
-<!--                  color = "white", size = 30) -->
-<!-- ``` -->
-<!-- ] -->
+--
+
+.pull-right[ 
+```{r, eval = TRUE, echo = FALSE}
+image_read("https://jeroen.github.io/images/frink.png") %>%
+  image_rotate(270) %>%
+  image_background("blue", flatten = TRUE) %>%
+  image_border("red", "10x10") %>%
+  image_annotate("Liguagens de programação ainda\nsão linguagens!", 
+                 color = "white", size = 30)
+```
+]
 
 ---
 class: middle, center
